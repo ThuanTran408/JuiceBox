@@ -8,7 +8,8 @@ postsRouter.use((req, res, next) => {
     next(); 
     });
 
-    postsRouter.get('/api/posts', async (req, res) => {
+    postsRouter.get('/', async (req, res) => {
+        
     const posts = await getAllPosts();
     
     res.send({
@@ -16,3 +17,4 @@ postsRouter.use((req, res, next) => {
     });
     });
 module.exports = postsRouter;
+
